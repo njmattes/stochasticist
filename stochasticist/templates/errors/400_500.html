@@ -1,0 +1,8 @@
+{% extends 'draw.html' %}
+
+{% block app_js %}
+  {{ super() }}
+  <script>
+    gs.draw_403();
+  </script>
+{% endblock %}

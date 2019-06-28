@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=UTF-8>
+  <title>Stochastic.ist</title>
+  {% assets 'css_main' %}
+  <link rel=stylesheet
+        href={{ ASSET_URL }}?5 >
+  {% endassets %}
+  {% assets 'img_favicon' %}
+  <link rel=icon
+        type=image/png
+        href={{ ASSET_URL }} >
+  {% endassets %}
+</head>
+<body>
+<div id=wrapper>
+<header>
+  {%- block header %}{% endblock -%}
+</header>
+<main>
+  {%- block main %}{% endblock -%}
+</main>
+<footer>
+  {%- block footer %}{% endblock -%}
+</footer>
+</div>
+</body>
+</html>

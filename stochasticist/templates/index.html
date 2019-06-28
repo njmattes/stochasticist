@@ -1,0 +1,24 @@
+{% extends 'draw.html' %}
+
+{% block main %}
+
+  {{ super() }}
+  <a class=download
+     id=download
+     href
+     download={{
+       'stochasticist-{}-{}-{}-{}-{}-{}-{}-{}'.format(
+         size, stroke, scale, cap, dirs, colorspace, bg, fg)
+     }}.png>
+    save
+  </a>
+
+{% endblock %}
+
+{% block app_js %}
+  {{ super() }}
+  <script src=/static/js/stochasticist.download.v0.js?4></script>
+  <script>
+    gs.step();
+  </script>
+{% endblock %}

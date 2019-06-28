@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block main %}
+
+  <div class=grid></div>
+
+{% endblock %}
+
+{% block footer %}
+
+  {% block options %}
+  <script>
+
+    let Options = {};
+
+    Options.grid_size = {{ size or 10 }};
+    Options.stroke = "{{ stroke or 2 }}";
+    Options.scale = {{ scale or 1 }};
+    Options.line_cap = "{{ cap or 'square' }}";
+    Options.directions = "{{ dirs or 'n,ne,e,se,s,sw,w,nw' }}";
+
+    Options.colorspace = "{{ colorspace or names }}";
+    Options.background = "{{ bg or 'white' }}";
+    Options.foreground = "{{ fg or 'black' }}";
+
+    Options.skitter = {{ skitter or 'false' }};
+    Options.scatter = {{ scatter or 'false' }};
+
+    Options.mouse = {{ mouse or 'false' }};
+    Options.drunkard = {{ drunkard or 'true' }};
+    Options.save = {{ save or 'false' }};
+
+    Options.stop = false;
+
+  </script>
+  {% endblock %}
+  <script src=/static/js/d3.v5.min.js></script>
+  {% block app_js %}
+  <script src=/static/js/stochasticist.colors.v0.js?4></script>
+  <script src=/static/js/stochasticist.grid.v0.js?4></script>
+  <script src=/static/js/stochasticist.main.v0.js?4></script>
+  {% block savepng %}{% endblock %}
+  {% endblock %}
+
+{% endblock %}
