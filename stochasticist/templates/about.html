@@ -5,9 +5,10 @@
 {% filter markdown %}
 
 {#  {% include '../README.md' %}#}
-# Plur.al
 
-`plur.al` makes pretty (dumb) pictures in your browser.
+# Stochastic.ist
+
+`stochastic.ist` makes pretty (dumb) pictures in your browser.
 Drawings are constructed on a square grid, with strokes
 moving in 45 degree increments.
 
@@ -16,7 +17,7 @@ moving in 45 degree increments.
 The interface is entirely in the URL. Construct a path
 containing key and value pairs. Usable keys are below.
 
-An example URL: [http://plur.al/scale/2/stroke/5/colorspace/hex/fg/222222,343434/bg/454545](http://plur.al/scale/2/stroke/5/colorspace/hex/fg/222222,343434/bg/454545)
+An example URL: [http://stochastic.ist/scale/2/stroke/5/colorspace/hex/fg/222222,343434/bg/454545](http://stochastic.ist/scale/2/stroke/5/colorspace/hex/fg/222222,343434/bg/454545)
 
 * `size`. The size of the grid cells in pixels. A positive
    integer less than the smaller of your browser's height
@@ -32,7 +33,7 @@ An example URL: [http://plur.al/scale/2/stroke/5/colorspace/hex/fg/222222,343434
   `round`, `square`, or `butt`. Defaults to `square`.)
 * `dirs`. Cardinal directionality of the strokes.
    (A comma-separated list of strings equal to `n`, `ne`,
-  `e`, `se`, `s`, `sw`, `w`, and/or `nw`. Defaults to
+  `e`, `se`, `s`, `sw`, `w`, `nw`. Defaults to
   `n,ne,e,se,s,sw,w,nw`.)
 * `colorspace`. Determines the type of values passed to
   `fg` and `bg`. (Accepts a string equal to either `names`
@@ -54,13 +55,13 @@ An example URL: [http://plur.al/scale/2/stroke/5/colorspace/hex/fg/222222,343434
    [`0`](/drunkard/0). Defaults to `true`.)
 
 ### Note
+
 `mouse` and `drunkard` are mutually exclusive
 (with `mouse` taking precedence).
 
 Some values that can't be parsed fall back to defaults.
-Others generate 403 errors. Consistency across these errors
-may or may not be obtained in a future version.
-
+Others generate 403 errors. Consistency amongst errros
+may or may not be obtained future versions.
 
 {% endfilter %}
   </div>

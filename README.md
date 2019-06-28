@@ -46,9 +46,11 @@ An example URL: [http://stochastic.ist/scale/2/stroke/5/colorspace/hex/fg/222222
    [`false`](/drunkard/false), [`1`](/drunkard/1), 
    [`0`](/drunkard/0). Defaults to `true`.)
    
-Note that `mouse` and `drunkard` are mutually exclusive 
+### Note 
+
+`mouse` and `drunkard` are mutually exclusive 
 (with `mouse` taking precedence).
 
 Some values that can't be parsed fall back to defaults.
-Others generate 403 errors. Consistency may be obtained
-in a future version.
+Others generate 403 errors. Consistency amongst errros 
+may or may not be obtained future versions.
